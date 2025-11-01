@@ -19,7 +19,6 @@ const searchTech = (e) =>{
     console.log(e)
     // techSelected.value = e
 }
-const drissi = 
 
 
 

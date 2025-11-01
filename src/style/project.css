@@ -1,0 +1,99 @@
+.projects{
+    padding: 40px;
+}
+
+.projects .title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.projects .subTitle{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.projects .selectTech{
+    margin-bottom: 20px;
+    position: relative;
+}
+.projects .selectTech .selectTechInput{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--primary);
+    width: 250px;
+}
+.projects .selectTech input:focus{
+    outline: none;
+    padding: 10px;     
+}
+.projects .selectTech .tachList{
+    position: absolute;
+    background-color: var(--primary);
+    width: 250px; padding: 10px;
+    border-radius: 5px;
+    top: 40px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    place-items: center;
+}
+.projects .selectTech .tachList .icon{
+    width: 30px; height: 30px;
+}
+
+
+.projects .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.projects .container .projectCard{
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid var(--primaryAccent);
+}
+.projects .container .projectCard .image{
+    /* background-color: aqua; */
+    overflow: hidden;
+}
+.projects .container .projectCard .image img{
+    width: 100%;
+    height: 100%;
+}
+
+.projects .container .projectCard .body{
+    padding: 10px;
+}
+.projects .container .projectCard .cardTitle{
+    text-align: start;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.projects .container .projectCard .cardDescription{
+    margin-bottom: 10px;
+}
+
+.projects .container .projectCard .cardTech{
+    display: flex;
+    gap: 5px;
+}
+
+.projects .container .projectCard .cardTech .icon{
+    height: 20px;
+    width: 20px;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,86 @@
+.competance{
+    padding: 40px;
+    border-bottom: 1px solid var(--primaryAccent);
+}
+
+.competance .title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: var(--primary);
+    font-weight: 500;
+    
+}
+
+.competance .subTitle{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.competance .selectTech{
+    /* border: 1px solid red; */
+    margin-bottom: 40px;
+    display: flex;
+    
+    
+}
+
+.competance .selectTech>div{
+    border-bottom: 2px solid var(--thired);
+    font-weight: 600;
+    padding: 10px;
+    transition: 0.5s;
+}
+.competance .selectTech>div:first-child, .competance .selectTech>div:hover{
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+
+.competance .content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.competance .content .cardCmp{
+    padding: 10px;
+    border: 1px solid var(--primary);
+    transition: 0.5s;
+}
+.competance .content .cardCmp:hover{
+    transition: 0.5s;
+    transform: rotateZ(-2deg) scale(1.05) ;
+    box-shadow: 0px 0px 10px 1px var(--primaryAccent);
+}
+
+.competance .content .cardCmp .headerCard{
+    font-weight: 500;
+    color: var(--primary);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px
+}
+
+.competance .content .cardCmp .headerCard .icon{
+    height: 20px;
+    width: 20px;
+}
+
+.competance .content .cardCmp .bodyCard .text{
+    margin-bottom: 15px;
+}
+
+
+.competance .content .cardCmp .bodyCard .stage{
+    font-weight: 500;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 60px;
+    color: var(--background)
+}
+

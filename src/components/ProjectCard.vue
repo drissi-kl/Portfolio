@@ -18,7 +18,7 @@ const props = defineProps({
     image: {default: dafaultProject}
 })
 
-console.log(props.tech);
+// console.log(props.tech);
 </script>
 
 <template>

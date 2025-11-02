@@ -18,31 +18,26 @@
 .projects .selectTech{
     margin-bottom: 20px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
 }
-.projects .selectTech .selectTechInput{
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid var(--primary);
-    width: 250px;
-}
-.projects .selectTech input:focus{
-    outline: none;
-    padding: 10px;     
-}
-.projects .selectTech .tachList{
-    position: absolute;
-    background-color: var(--primary);
-    width: 250px; padding: 10px;
-    border-radius: 5px;
-    top: 40px;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    place-items: center;
-}
-.projects .selectTech .tachList .icon{
-    width: 30px; height: 30px;
+.projects .selectTech .text{
+    font-weight: 500;
 }
 
+.projects .selectTech .options{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+.projects .selectTech .icon{
+    width: 30px; height: 30px;
+    transition: 0.3s;
+}
+.projects .selectTech .icon:hover, .projects .selectTech .options .clicked {
+    transform: scale(0.85);
+}
 
 .projects .container{
     display: grid;

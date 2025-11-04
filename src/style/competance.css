@@ -29,12 +29,12 @@
     border-bottom: 2px solid var(--thired);
     font-weight: 600;
     padding: 10px;
-    transition: 0.5s;
+    transition: 0.3s;
 }
-.competance .selectTech>div:first-child, .competance .selectTech>div:hover{
+.competance .selectTech .active, .competance .selectTech>div:hover{
     color: var(--primary);
     border-bottom: 2px solid var(--primary);
-    transition: 0.5s;
+    transition: 0.3s;
     cursor: pointer;
 }
 
@@ -44,12 +44,56 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+    /* border: 1px solid red; */
+    /* height: 500px; */
+    position: relative;
+    margin-bottom: 40px;
 }
+
+@media (max-width: 1000px){
+    .competance .content{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 750px){
+    .competance .content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 550px){
+    .competance .content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.competance .moreBtn{
+    display: flex;
+    justify-content: center;
+}
+.competance .moreBtn button{
+    padding: 8px 20px;
+    font-weight: 500;
+    /* border-radius: 5px; */
+    border: none;
+    color: var(--primary);
+    background-color: var(--background);
+    border: 1px solid var(--primary);
+    transition: 0.3s;
+}
+.competance .moreBtn button:hover{
+    cursor: pointer;
+    transform: scale(0.95);
+    transition: 0.3s;
+}
+
 
 .competance .content .cardCmp{
     padding: 10px;
     border: 1px solid var(--primary);
     transition: 0.5s;
+    display: flex;
+    flex-direction: column;
 }
 .competance .content .cardCmp:hover{
     transition: 0.5s;
@@ -69,6 +113,14 @@
 .competance .content .cardCmp .headerCard .icon{
     height: 20px;
     width: 20px;
+}
+
+.competance .content .cardCmp .bodyCard{
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .competance .content .cardCmp .bodyCard .text{

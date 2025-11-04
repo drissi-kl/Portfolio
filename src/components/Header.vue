@@ -13,14 +13,13 @@ import '../style/header.css';
                     Full-Stack Developer / DevOps
                 </p>
                 <p class="text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perspiciatis ipsa voluptatem dolorum 
-                    sapiente? Aperiam alias molestias quo, quaerat doloribus voluptatibus, quia libero eveniet 
-                    architecto minima ut molestiae reprehenderit eum illo itaque temporibus animi culpa! Atque 
-                    reprehenderit non nulla dignissimos delectus eum sapiente nobis quidem illo beatae cumque 
-                    sequi dolore voluptatem fugit vero, nam tempore repellat quaerat esse soluta vitae. Illum, 
-                    itaque. Sint atque quia explicabo adipisci numquam quae odit fugit rerum voluptates, ea 
-                    exercitationem iusto, magni facere ab assumenda maiores dignissimos incidunt quam maxime 
-                    illo placeat. Fugit eos dolorum nesciunt ad. A accusantium aspernatur atque. Quo id atque illum.
+                    I'm a passionate junior web developer who enjoys transforming ideas into functional and visually appealing 
+                    digital experiences. From crafting responsive user interfaces to connecting dynamic backends, I love every 
+                    step of the web development process. What excites me most about this field is its constant evolution — there's 
+                    always something new to learn, a new framework to explore, or a better way to solve a problem. I'm driven by 
+                    curiosity and a desire to grow, always seeking opportunities to sharpen my skills and take on new challenges. 
+                    My goal is to create clean, efficient, and meaningful web solutions that make a real impact while continuously 
+                    improving as a developer and as a learner.
                 </p>
             </div>
             <div class="bottom">

@@ -34,11 +34,17 @@
 .projects .selectTech .icon{
     width: 30px; height: 30px;
     transition: 0.3s;
+    padding: 3px;
+    border-bottom: 1px solid #ffffff00;
 }
-.projects .selectTech .icon:hover, .projects .selectTech .options .clicked {
-    transform: scale(0.85);
+.projects .selectTech .icon:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.212);
 }
-
+.projects .selectTech .options .clicked{
+    transform: translateY(-5px);
+    border-bottom: 1px solid #fff;
+}
 .projects .container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);

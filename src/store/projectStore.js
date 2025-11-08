@@ -21,7 +21,7 @@ const projectStore = defineStore('projectStore',{
                 title: "Seren", 
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptate doloremque deleniti. Reprehenderit, veritatis rerum.xxxx",
                 image: serenImg,
-                tech: ['html', 'css', 'javascript', 'react', 'laravel', 'reactQueary', 'react hook form', 'mysql'], 
+                tech: ['Html', 'Css', 'JavaScript', 'React', 'Laravel', 'ReactQuery'], 
                 state: 'Development',
                 color: '#1E88E5'
             },
@@ -29,7 +29,7 @@ const projectStore = defineStore('projectStore',{
                 title: "Portfolio", 
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptate doloremque deleniti. Reprehenderit, veritatis rerum.xxxx",
                 image: portfolioImg,
-                tech: ['html', 'css', 'javascript', 'vue', 'pinia'],
+                tech: ['Html', 'Css', 'JavaScript', 'Vue'],
                 state: 'Development',
                 color: '#1E88E5'
             }
@@ -44,9 +44,13 @@ const projectStore = defineStore('projectStore',{
 
     actions: {
         clicked(name){
-            this.projects.forEach((project => {
+            this.technologies.forEach((project => {
                 if(project.name == name){ project.clicked = !project.clicked}
             }))
+
+
+
+            console.log(this.technologies)
         }
     }
 })

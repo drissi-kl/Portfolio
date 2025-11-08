@@ -18,7 +18,9 @@ const props = defineProps({
     image: {default: dafaultProject}
 })
 
-// console.log(props.tech);
+const icons = {Html, Css, JavaScript, Laravel, React, ReactQuery, Vue};
+
+console.log(props.tech);
 </script>
 
 <template>
@@ -29,15 +31,8 @@ const props = defineProps({
         <div class="body">
             <p class="cardTitle">{{ props.title }}</p>
             <p class="cardDescription">{{ props.description }}</p>
-            <div class="cardTech">
-                <div class="icon" v-for="item in props.tech"  >
-                    <Html class="icon" v-if="item=='html'" />  
-                    <Css class="icon" v-if="item=='css'" />  
-                    <JavaScript class="icon" v-if="item=='javascript'" />  
-                    <Laravel class="icon" v-if="item=='laravel'" />  
-                    <React class="icon" v-if="item=='react'" />  
-                    <Vue class="icon" v-if="item=='vue'" />  
-                </div>                
+            <div class="cardTech" >
+                <component class="icon" v-for="icon in props.tech" :is="icons[icon]" />
             </div>
         </div>
     </div>

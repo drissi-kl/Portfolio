@@ -1,5 +1,5 @@
 <script setup>
-import { markRaw, ref } from 'vue';
+import { computed, markRaw, ref } from 'vue';
 
 import '../style/project.css';
 import ProjectCard from './ProjectCard.vue';
@@ -17,45 +17,34 @@ import Vue from '../images/icons/vue.svg';
 
 import { projectStore } from '../store/projectStore';
 
-const xx = projectStore();
+const store = projectStore();
 
-// const icons = {Html, Css, JavaScript, Laravel, React, ReactQuery, Vue};
-// const technologies = ref(store.technologies);
-// const techSelected = ref([]);
+const icons = {Html, Css, JavaScript, Laravel, React, ReactQuery, Vue};
 
-// const projects = ref([])
-// const selectedProjects = ref(projects.value)
+
+
+const techSelected = ref([]);
+
+const technologies = computed(() => { return store.technologies});
+const projects = computed(()=>{ 
+    const prjs = store.projects;
+    if(techSelected.value.length == 0){
+        return prjs;
+    } else {
+        return prjs.filter((prj)=> { return prj.tech.some((t)=> { return techSelected.value.includes(t)}  )})
+    }
+});
+
 
 const drissi =(e)=>{
-    // for show icon as clicker (design)
-    // technologies.value.forEach((item) => {
-    //     if(item.name == e){  item.clicked= !item.clicked }
-    // })
+    // for show icon as clicker (design)-
+    store.clicked(e);
     
-    // if(techSelected.value.includes(e)){
-    //     techSelected.value = techSelected.value.filter(item => item != e);
-    // } else {
-    //     techSelected.value.push(e);
-    // }
-
-
-
-    // if(techSelected.value.length == 0){
-    //     selectedProjects.value = projects.value;
-    // }else{
-    //     selectedProjects.value=[];
-    //     projects.value.forEach((project)=>{ 
-    //         let belongs = false;
-    //         project.tech.forEach((t) => {if(techSelected.value.includes(t)){belongs = true}}  )
-            
-    //         if(belongs){
-    //             selectedProjects.value.push(project)
-    //         }
-    //     })
-    // }
-
-   
-    
+    if(techSelected.value.includes(e)){
+        techSelected.value = techSelected.value.filter(item => item != e);
+    } else {
+        techSelected.value.push(e);
+    }
 }
 
 
@@ -63,15 +52,15 @@ const drissi =(e)=>{
 </script>
 
 <template>
-    <!-- <div class="projects">
-        <p class="title">Projects</p>
+    <div class="projects">
+        <p class="title"  >Projects</p>
         <p class="subTitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptate doloremque deleniti. Reprehenderit, veritatis rerum. Sequi ex id fuga enim corporis sunt voluptas laboriosam placeat tenetur veniam. Vitae, reprehenderit esse?</p>
 
 
         <div class="selectTech">
             <p class="text">select project by technologie: {{ techSelected.length }}</p>
             <div class="options">
-                <component v-for="tech in technologies" :is="icons[tech.name]" 
+                <component v-for="tech in technologies" :is="icons[tech.name]" :key="tech.name"
                     :class="['icon', tech.clicked && 'clicked']" @click="drissi(tech.name)"
                 />
             </div>
@@ -79,15 +68,14 @@ const drissi =(e)=>{
 
         <div class="container">
             <ProjectCard 
-                v-for = "project in selectedProjects"
+                v-for = "project, index in projects"
+                :key="project.title"
                 :title="project.title" 
                 :description="project.description"
                 :image="project.image"   
                 :tech="project.tech"
-                
             />
-            
         </div>
-    </div> -->
+    </div> 
 </template>
 

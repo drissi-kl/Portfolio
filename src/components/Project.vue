@@ -16,6 +16,7 @@ import ReactQuery from '../images/icons/reactQuery.svg';
 import Vue from '../images/icons/vue.svg';
 
 import { projectStore } from '../store/projectStore';
+import { modeStore } from '../store/modeStore';
 
 const store = projectStore();
 
@@ -48,11 +49,13 @@ const drissi =(e)=>{
 }
 
 
+const modestore = modeStore();
+const currrentMode = computed(()=>{ return modestore.darkMode });
 
 </script>
 
 <template>
-    <div class="projects">
+    <div :class="['projects', !currrentMode && 'light']">
         <p class="title"  >Projects</p>
         <p class="subTitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptate doloremque deleniti. Reprehenderit, veritatis rerum. Sequi ex id fuga enim corporis sunt voluptas laboriosam placeat tenetur veniam. Vitae, reprehenderit esse?</p>
 

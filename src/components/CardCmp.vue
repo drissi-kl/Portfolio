@@ -19,6 +19,8 @@ import Python from '../images/icons/Python.svg'
 import WordPress from '../images/icons/WordPress.svg'
 import Postman from '../images/icons/Postman.svg'
 import ReactHookForm from '../images/icons/ReactHookForm.svg'
+import { modeStore } from '../store/modeStore'
+import { computed } from 'vue'
 
 
 const props = defineProps({
@@ -33,12 +35,13 @@ const icons = {
     Docker, Express, MongoDB, Mongoose, MySQL, NodeJs, Php, Python, WordPress, Postman
 }
 
-
+const modestore = modeStore();
+const currrentMode = computed(()=>{ return modestore.darkMode });
 
 </script>
 
 <template>
-    <div class="cardCmp">
+    <div :class="['cardCmp', !currrentMode && 'light']">
         <div class="headerCard" >
             <component :is="icons[name]" class="icon"  />
             {{ props.name }}

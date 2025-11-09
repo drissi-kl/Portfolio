@@ -1,5 +1,15 @@
+.light {
+    --background: #FFFFFF;
+    --primary: #1A1A1A;
+    --secondary: #555555;
+    --thired: #55555530;
+    --primaryAccent: #008080;
+    --secondaryAccent: #EFEFEF;
+}
+
 .projects{
     padding: 40px;
+    border-bottom: 1px solid var(--primaryAccent);
 }
 
 .projects .title{

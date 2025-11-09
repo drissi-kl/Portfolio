@@ -1,11 +1,47 @@
 <script setup> 
+
+import { computed } from 'vue';
+import {Vue3Lottie} from 'vue3-lottie';
+
 import emailImage from '../images/email.png';
+import developerAnimation from "../images/animation/Coding (1).json";
+import { modeStore } from '../store/modeStore';
+import cv from "../files/CV.pdf";
 import '../style/header.css';
+
+
+const modestore = modeStore();
+const currrentMode = computed(()=>{ return modestore.darkMode });
+
+
+const downloadCV = () => {
+    const a = document.createElement('a');
+    a.href = cv;
+    a.download = "DRISSI Abderrahmane CV";
+    a.click();
+    a.remove();
+    console.log('cv', cv);
+}
+
+const showCV = () => {
+    const a = document.createElement('a');
+    a.href = cv;
+    a.target="_blank";
+    a.click();
+    a.remove();
+    console.log('cv', cv);
+}
+
+
+
+
+
+
 
 </script>
 
 <template>
-    <div class="header">
+    <div :class="['header', !currrentMode && 'light']">
         <div class="rightSide">
             <div class="top">
                 <p class="title">DRISSI Abderrahmane</p>
@@ -23,20 +59,18 @@ import '../style/header.css';
                 </p>
             </div>
             <div class="bottom">
-                <button class="downloadBtn">
-                    Download CV
-                    <div class="shadowBtn shadowBtn1"></div>
-                    <div class="shadowBtn shadowBtn2"></div>
-                    <div class="shadowBtn shadowBtn3"></div>
-                    <div class="shadowBtn shadowBtn4"></div>
-                </button>
+                <button class="downloadBtn" @click="downloadCV">Download CV</button>
+                <button class="showBtn" @click="showCV">Show CV</button>
                 
             </div>
+
+            
         </div>
     
         <div class="leftSide">
-            <img class="myImage" :src="emailImage" alt="">
+            <Vue3Lottie class="animation" :animationData="developerAnimation"  :loop="true" :autoplay="true" :speed="1"  />
         </div>
+
 
     </div>
 

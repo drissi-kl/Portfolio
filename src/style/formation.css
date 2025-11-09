@@ -1,3 +1,12 @@
+.light {
+    --background: #FFFFFF;
+    --primary: #1A1A1A;
+    --secondary: #555555;
+    --thired: #55555530;
+    --primaryAccent: #008080;
+    --secondaryAccent: #EFEFEF;
+}
+
 .formations{
     padding: 40px;
     border-bottom: 1px solid var(--primaryAccent);
@@ -31,8 +40,9 @@
 
 .formations .container .formation .dote {
     background-color: var(--primaryAccent);
-    width: 5px;
-    border-radius: 5px;
+    width: 1px;
+    /* border-radius: 5px; */
+    box-shadow: 0px 0px 5px 1px var(--primaryAccent);
 }
 
 

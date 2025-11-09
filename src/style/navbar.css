@@ -1,3 +1,12 @@
+.light {
+    --background: #FFFFFF;
+    --primary: #1A1A1A;
+    --secondary: #555555;
+    --thired: #55555530;
+    --primaryAccent: #008080;
+    --secondaryAccent: #EFEFEF;
+}
+
 .nav{
     display: flex;
     justify-content: space-between;
@@ -32,7 +41,7 @@
     /* background-color: chocolate; */
     text-decoration: none;
     transition: 0.5s;
-    color: white;
+    color: var(--primary);
     display: block;
     font-weight: 500;
 }
@@ -42,11 +51,21 @@
     transform: scale(1.15);
 }
 
-
-.nav .rightSide button{
+.nav .rightSide{
+    background-color: #555555;
     height: 40px;
     width: 40px;
     border-radius: 20px;
+    display: flex; justify-content: center; align-items: center;
+    transition: 0.5s;
+}
+.nav .rightSide:hover{
+    transform: scale(0.9);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.nav .rightSide .modeBtn{
+    width: 70%; height: 70%;
     border: none;
     display: flex;
     justify-content: center;

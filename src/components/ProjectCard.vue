@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import dafaultProject from "../images/defaultProject.jpg";
 
 import Html from '../images/icons/html.svg';
@@ -9,6 +9,7 @@ import Laravel from '../images/icons/laravel.svg';
 import React from '../images/icons/react.svg';
 import ReactQuery from '../images/icons/reactQuery.svg';
 import Vue from '../images/icons/vue.svg';
+import { modeStore } from "../store/modeStore";
 
 
 const props = defineProps({
@@ -20,11 +21,15 @@ const props = defineProps({
 
 const icons = {Html, Css, JavaScript, Laravel, React, ReactQuery, Vue};
 
-console.log(props.tech);
+
+const modestore = modeStore();
+const currrentMode = computed(()=>{ return modestore.darkMode });
+
+
 </script>
 
 <template>
-    <div class="projectCard">
+    <div :class="['projectCard', !currrentMode && 'light']">
         <div class="image">
             <img :src="props.image" alt="">
         </div>

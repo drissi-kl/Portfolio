@@ -4,6 +4,7 @@ import CardCmp from './CardCmp.vue';
 
 import { skillsStore } from '../store/competanceStore';
 import { computed, ref } from 'vue';
+import { modeStore } from '../store/modeStore';
 
 const store = skillsStore();
 
@@ -46,10 +47,13 @@ const moreSkills = computed(()=>{
 })
 
 
+const modestore = modeStore();
+const currrentMode = computed(()=>{ return modestore.darkMode });
+
 </script>
 
 <template>
-    <div class="competance">
+    <div :class="['competance', !currrentMode && 'light']">
         <p class="title">Skills</p>
         <p class="subTitle">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos hic labore fuga esse consectetur 

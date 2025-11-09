@@ -1,0 +1,58 @@
+.formations{
+    padding: 40px;
+    border-bottom: 1px solid var(--primaryAccent);
+
+}
+
+.formations .title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.formations .subTitle{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.formations .container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 0px 10px;
+
+}
+.formations .container .formation{
+    display: flex;
+    gap: 10px;
+}
+
+.formations .container .formation .dote {
+    background-color: var(--primaryAccent);
+    width: 5px;
+    border-radius: 5px;
+}
+
+
+.formations .container .formation .informaiton .name{
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--primary);
+}
+.formations .container .formation .informaiton .period{
+    font-size: 16px;
+    color: var(--primaryAccent);
+}
+.formations .container .formation .informaiton .school{
+    font-size: 16px;
+    color: var(--secondary);
+    margin-bottom: 10px;
+
+}
+.formations .container .formation .informaiton .description{
+    font-size: 16px;
+    color: var(--secondary);
+}
+

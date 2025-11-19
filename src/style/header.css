@@ -15,6 +15,8 @@
     border-bottom: 1px solid var(--primaryAccent);
 }
 
+
+
 .header .rightSide{
     flex-basis: 70%;
     display: flex;
@@ -86,8 +88,16 @@
 
 
 
+@media (max-width: 700px) {
+    .header{
+        flex-direction: column;
+    }
 
-
+    .header .leftSide{
+        width: 40%;
+        align-self: center;
+    }
+}
 
 
 

@@ -29,9 +29,32 @@
 .competance .selectTech{
     /* border: 1px solid red; */
     margin-bottom: 40px;
-    display: flex;
+    display: flex;   
+}
+
+@media (max-width: 600px){
+    .competance .selectTech{
+        overflow-x: scroll;
+        scrollbar-color: #00CED1 #333333;
+        scrollbar-width: thin;
+    }
     
-    
+    ::-webkit-scrollbar {
+            width: 10px; /* Vertical scrollbar width */
+            height: 10px; /* Horizontal scrollbar height */
+        }
+    ::-webkit-scrollbar-track {
+        background: #333333; /* Dark gray background */
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #00CED1; /* Bright Cyan-Blue accent color */
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #00a0a3; /* Slightly darker cyan on hover */
+    }
+
 }
 
 .competance .selectTech>div{

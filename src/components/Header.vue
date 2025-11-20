@@ -9,6 +9,7 @@ import { modeStore } from '../store/modeStore';
 import cv from "../files/CV.pdf";
 import '../style/header.css';
 
+import gitHub from '../images/icons/GitHub.svg';
 
 const modestore = modeStore();
 const currrentMode = computed(()=>{ return modestore.darkMode });
@@ -59,11 +60,15 @@ const showCV = () => {
                 </p>
             </div>
             <div class="bottom">
-                <button class="downloadBtn" @click="downloadCV">Download CV</button>
-                <button class="showBtn" @click="showCV">Show CV</button>
-                
+                <div class="social">
+                    <a href="https://github.com/drissi-kl" target="_blank"><gitHub class="icon"  /></a>
+                </div>
+                <div class="buttons">
+                    <button class="downloadBtn" @click="downloadCV">Download CV</button>
+                    <button class="showBtn" @click="showCV">Show CV</button>
+                </div>
             </div>
-
+            
             
         </div>
     

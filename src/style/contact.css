@@ -79,10 +79,31 @@
 }
 
 
+.contact .container .leftSide .sendBtn{
+    padding: 8px 25px;
+    border: none;
+    width: fit-content;
+    border-radius: 5px;
+    background-color: var(--primaryAccent);
+    color: var(--background);
+    font-weight: 700;
+}
 
+.contact .container .leftSide .validationBlock{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+}
+.contact .container .leftSide .validationBlock p{
+    flex-grow: 10;
+}
 
-
-
+.contact .container .leftSide .validationAnime{
+    padding: 0px;
+    height: 50px;
+    flex-basis: 10%;
+    /* background-color: brown; */
+}
 
 
 .contact .container .rightSide{

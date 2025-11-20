@@ -46,7 +46,7 @@ export const skillsStore = defineStore('skillsStore',{
             {   
                 name:"Vue",
                 description:"With Vue.js, I create responsive and dynamic web interfaces using its powerful component-based structure. I manage data efficiently with reactivity and computed properties, and I use tools like Pinia or Vuex for state management. Vue allows me to build clean, scalable, and fast applications with an elegant and flexible design.",
-                stage:"Professional",
+                stage:"Advanced",
                 belongsTo: "Front-end"                
             },
             {   
@@ -64,31 +64,31 @@ export const skillsStore = defineStore('skillsStore',{
             {   
                 name:"WordPress",
                 description:"With WordPress, I create dynamic and customizable websites using its powerful CMS features. I develop themes and plugins, manage content efficiently, and build responsive, user-friendly websites tailored to client needs without compromising performance or scalability.",
-                stage:"Professional",
+                stage:"Beginner",
                 belongsTo:"Back-end"
             },
             {   
                 name:"NodeJs",
                 description:"With Node.js, I build fast and scalable server-side applications using JavaScript. I handle APIs, manage databases, and implement backend logic efficiently, enabling real-time data processing and seamless communication between frontend and backend.",
-                stage:"Professional",
+                stage:"Advanced",
                 belongsTo: "Back-end"                
             },
             {   
                 name:"Express",
                 description:"With Express.js, I create fast and lightweight backend applications and APIs using Node.js. I handle routing, middleware, and server logic efficiently, enabling seamless communication between the frontend and database while keeping the code clean and maintainable.",
-                stage:"Professional",
+                stage:"Advanced",
                 belongsTo: "Back-end"                
             },
             {   
                 name:"Mongoose",
                 description:"With Mongoose, I interact with MongoDB databases efficiently in Node.js applications. I define schemas, enforce data validation, and perform CRUD operations easily, making database management structured, reliable, and scalable.",
-                stage:"Professional",
+                stage:"Advanced",
                 belongsTo: "Package"                
             },
             {   
                 name:"Python",
                 description:"With Python, I write clean and efficient code for a wide range of applications. I use it for backend development, automation scripts, data manipulation, and problem-solving, leveraging its simplicity and versatility to build robust and scalable solutions.",
-                stage:"Professional",
+                stage:"Advanced",
                 belongsTo: "Programming Foundations"                
             },
             {   
@@ -100,13 +100,13 @@ export const skillsStore = defineStore('skillsStore',{
             {   
                 name:"C",
                 description:"rem ea in architecto praesentium a distinctio dolorum voluptates, accusamus repellat saepe magni quas numquam corrupti officia et veritatis unde. Numquam,",
-                stage:"Advanced",
+                stage:"Beginner",
                 belongsTo: "Programming Foundations"                
             },
             {   
                 name:"MongoDB",
                 description:"rem ea in architecto praesentium a distinctio dolorum voluptates, accusamus repellat saepe magni quas numquam corrupti officia et veritatis unde. Numquam,",
-                stage:"Professional",
+                stage:"Advanced",
                 belongsTo: "DBMS"                
             },
             {   
@@ -118,13 +118,13 @@ export const skillsStore = defineStore('skillsStore',{
             {   
                 name:"Docker",
                 description:"rem ea in architecto praesentium a distinctio dolorum voluptates, accusamus repellat saepe magni quas numquam corrupti officia et veritatis unde. Numquam,",
-                stage:"Professional",
+                stage:"Beginner",
                 belongsTo: "Tools"                
             },
             {   
                 name:"Postman",
                 description:"rem ea in architecto praesentium a distinctio dolorum voluptates, accusamus repellat saepe magni quas numquam corrupti officia et veritatis unde. Numquam,",
-                stage:"Professional",
+                stage:"Advanced",
                 belongsTo: "Tools"                
             }
         ],

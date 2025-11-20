@@ -57,8 +57,10 @@ const currrentMode = computed(()=>{ return modestore.darkMode });
 <template>
     <div :class="['projects', !currrentMode && 'light']">
         <p class="title"  >Projects</p>
-        <p class="subTitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptate doloremque deleniti. Reprehenderit, veritatis rerum. Sequi ex id fuga enim corporis sunt voluptas laboriosam placeat tenetur veniam. Vitae, reprehenderit esse?</p>
-
+        <p class="subTitle">
+            These projects showcase my passion for coding and continuous learning. Every idea starts small, 
+            then grows into something meaningful through experimentation, improvement, and dedication.
+        </p>
 
         <div class="selectTech">
             <p class="text">select project by technologie: {{ techSelected.length }}</p>
@@ -77,6 +79,8 @@ const currrentMode = computed(()=>{ return modestore.darkMode });
                 :description="project.description"
                 :image="project.image"   
                 :tech="project.tech"
+                :state = "project.state"
+                :bgState = "project.bgState"
             />
         </div>
     </div> 

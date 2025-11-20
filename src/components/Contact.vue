@@ -19,10 +19,7 @@ const currrentMode = modestore.darkMode;
 <template>
     <div :class="['contact', !currrentMode && 'light']">
         <p class="title">Contant</p>
-        <p class="subTitle">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam et eius, eos quos provident culpa ullam deleniti, temporibus harum commodi, incidunt possimus aliquid assumenda repellat non? Est, fugiat id!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam et eius, eos quos provident culpa ullam deleniti, temporibus harum commodi, incidunt possimus aliquid assumenda repellat non? Est, fugiat id!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam et eius, eos quos provident culpa ullam deleniti, temporibus harum commodi, incidunt possimus aliquid assumenda repellat non? Est, fugiat id!
+        <p class="subTitle">If you have a project, feedback, or want to help me grow, I’d love to hear from you
         </p>
         <div class="container">
             <div class="leftSide">

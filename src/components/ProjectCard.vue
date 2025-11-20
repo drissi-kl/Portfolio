@@ -12,11 +12,15 @@ import Vue from '../images/icons/vue.svg';
 import { modeStore } from "../store/modeStore";
 
 
+
+
 const props = defineProps({
     title: {type: String, default: ""},
     description: {type: String, default: ""},
     tech: {type: Array, default: []},
-    image: {default: dafaultProject}
+    image: {default: dafaultProject},
+    state: {type: String, default: "Planning"},
+    bgState: {type: String, default: "#4FC3F7"}
 })
 
 const icons = {Html, Css, JavaScript, Laravel, React, ReactQuery, Vue};
@@ -31,11 +35,17 @@ const currrentMode = computed(()=>{ return modestore.darkMode });
 <template>
     <div :class="['projectCard', !currrentMode && 'light']">
         <div class="image">
+            <div 
+                class="state"
+                :style="{'background-color': props.bgState }"
+                >{{props.state}}</div>
             <img :src="props.image" alt="">
         </div>
         <div class="body">
-            <p class="cardTitle">{{ props.title }}</p>
-            <p class="cardDescription">{{ props.description }}</p>
+            <div class="top">
+                <p class="cardTitle">{{ props.title }}</p>
+                <p class="cardDescription">{{ props.description }}</p>
+            </div>
             <div class="cardTech" >
                 <component class="icon" v-for="icon in props.tech" :is="icons[icon]" />
             </div>

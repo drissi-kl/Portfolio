@@ -41,7 +41,10 @@ const currrentMode = computed(()=>{ return modestore.darkMode });
 <template>
     <div :class="['formations', !currrentMode && 'light']">
         <h1 class="title">Formations vs. Training</h1>
-        <p class="subTitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quibusdam nam aspernatur. Tempora iusto voluptas delectus hic nemo et repellendus libero ipsam. Recusandae possimus nulla dignissimos tempore veritatis corrupti delectus modi, maxime quos maiores voluptas labore illo architecto quam, tempora illum dolore odit deserunt, animi tenetur perferendis quis placeat assumenda!</p>
+        <p class="subTitle">
+            Each formation I completed helped me understand new concepts, explore technologies, and grow with 
+            confidence. This learning path continues to shape the developer I am becoming.
+        </p>
 
         <div class="container">
             <div class="formation" v-for="formation in formations" >

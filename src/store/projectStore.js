@@ -6,6 +6,14 @@ import portfolioImg from '../images/portfolioImage.png'
 const projectStore = defineStore('projectStore',{
     state: ()=>({
         stages: {'Planning': "#4FC3F7", 'Design':"#BA68C8", 'Development':'#66BB6A', 'Testing':'#FFA726', 'Build':'#FFEB3B', 'Deployment':'#1E88E5', 'Maintenance':'#757575'},
+        statesPrt:{
+            Planning: "#4FC3F7",
+            Design: "#BA68C8",
+            Development: "#4DB6AC",
+            Testing: "#FFB74D",
+            Deployment: "#81C784",
+            Maintenance: "#F06292"
+        },
         technologies:[
             {name: 'Html' , size: 20, clicked: false},
             {name: 'Css' , size: 20, clicked: false},
@@ -18,21 +26,22 @@ const projectStore = defineStore('projectStore',{
 
         projects:[
             {
+                title: "Portfolio", 
+                description: "This portfolio is a window into my world as a developer.From learning new technologies to building real projects, every step has helped me grow.Explore my work, skills, and experiences — and see how I turn ideas into functional and meaningful solutions.",
+                image: portfolioImg,
+                tech: ['Html', 'Css', 'JavaScript', 'Vue'],
+                state: 'Deployment',
+                bgState: "#81C784",
+                // goTo: ""
+            },
+            {
                 title: "Seren", 
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptate doloremque deleniti. Reprehenderit, veritatis rerum.xxxx",
                 image: serenImg,
                 tech: ['Html', 'Css', 'JavaScript', 'React', 'Laravel', 'ReactQuery'], 
                 state: 'Development',
-                color: '#1E88E5'
+                bgState: "#4DB6AC",
             },
-            {
-                title: "Portfolio", 
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptate doloremque deleniti. Reprehenderit, veritatis rerum.xxxx",
-                image: portfolioImg,
-                tech: ['Html', 'Css', 'JavaScript', 'Vue'],
-                state: 'Development',
-                color: '#1E88E5'
-            }
         ]
 
 

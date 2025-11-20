@@ -64,10 +64,20 @@
     border-radius: 5px;
     overflow: hidden;
     border: 1px solid var(--primaryAccent);
+    display: flex;
+    flex-direction: column;
 }
 .projects .container .projectCard .image{
     /* background-color: aqua; */
     overflow: hidden;
+    position: relative;
+}
+.projects .container .projectCard .image .state{
+    position: absolute;
+    top: 5px; left: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--primary)
 }
 .projects .container .projectCard .image img{
     width: 100%;
@@ -75,7 +85,11 @@
 }
 
 .projects .container .projectCard .body{
+    flex-grow: 1;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .projects .container .projectCard .cardTitle{
     text-align: start;

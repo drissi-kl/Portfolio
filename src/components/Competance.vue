@@ -56,10 +56,8 @@ const currrentMode = computed(()=>{ return modestore.darkMode });
     <div :class="['competance', !currrentMode && 'light']">
         <p class="title">Skills</p>
         <p class="subTitle">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos hic labore fuga esse consectetur 
-            excepturi debitis est in architecto. Voluptatum nesciunt vel impedit voluptas esse quibusdam 
-            dolore rem ea in architecto praesentium a distinctio dolorum voluptates, accusamus repellat saepe 
-            magni quas numquam corrupti officia et veritatis unde. Numquam, provident nostrum?
+            Every skill here reflects my commitment to learning and improving.
+            With every project, I sharpen these abilities and discover new ways to grow as a developer.
         </p>
         <div class="selectTech">
             <div :class="[categorySelected == 'All'?'active':'' ]" @click="selectCategory('All')">All()</div>

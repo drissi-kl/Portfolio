@@ -68,9 +68,9 @@
     flex-direction: column;
 }
 .projects .container .projectCard .image{
-    /* background-color: aqua; */
     overflow: hidden;
     position: relative;
+    height: 150px;
 }
 .projects .container .projectCard .image .state{
     position: absolute;
@@ -82,6 +82,7 @@
 .projects .container .projectCard .image img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .projects .container .projectCard .body{

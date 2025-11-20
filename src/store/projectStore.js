@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
-import serenImg from '../images/project1.png';
-import portfolioImg from '../images/portfolioImage.png'
+import serenImg from '../images/serenLogo.png';
+import portfolioImg from '../images/portfolio.png'
 
 
 const projectStore = defineStore('projectStore',{
@@ -36,7 +36,9 @@ const projectStore = defineStore('projectStore',{
             },
             {
                 title: "Seren", 
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptate doloremque deleniti. Reprehenderit, veritatis rerum.xxxx",
+                description: `An employee management app that allows staff to check in/out, track work hours, send messages to the manager, 
+                    and manage salaries and positions. Built with React, React Query, and React Hook Form on the frontend, and Laravel on 
+                    the backend for reliable performance.`,
                 image: serenImg,
                 tech: ['Html', 'Css', 'JavaScript', 'React', 'Laravel', 'ReactQuery'], 
                 state: 'Development',

@@ -3,7 +3,6 @@
 import { computed } from 'vue';
 import {Vue3Lottie} from 'vue3-lottie';
 
-import emailImage from '../images/email.png';
 import developerAnimation from "../images/animation/Coding (1).json";
 import { modeStore } from '../store/modeStore';
 import cv from "../files/CV.pdf";

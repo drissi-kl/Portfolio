@@ -4,9 +4,6 @@ import { computed, markRaw, ref } from 'vue';
 import '../style/project.css';
 import ProjectCard from './ProjectCard.vue';
 
-import Project1 from "../images/project1.png";
-import portfolioImage from '../images/portfolioImage.png';
-
 import Html from '../images/icons/html.svg';
 import Css from '../images/icons/css.svg';
 import JavaScript from '../images/icons/javascript.svg';
